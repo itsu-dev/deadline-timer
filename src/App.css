@@ -19,7 +19,7 @@ main {
     }
 
     .settings-description {
-        font-size: 1rem;
+        font-size: 1.6rem;
         color: #fff;
         text-align: center;
     }
@@ -29,6 +29,10 @@ main {
         font-size: 10rem;
         font-weight: 700;
         color: #fff;
+    }
+
+    .settings {
+        font-size: 1.6rem;
     }
 }
 

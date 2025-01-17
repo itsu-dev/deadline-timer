@@ -52,7 +52,7 @@ function App() {
             }
             </a>
             {revealSettings &&
-                <section>
+                <section className={"settings"}>
                     <h2>設定</h2>
                     <p>タイトル：<input type={"text"} placeholder={'卒論提出まで'} value={inputTitle}
                                        onChange={(e) => setInputTitle(e.target.value)}></input></p>
