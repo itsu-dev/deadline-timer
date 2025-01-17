@@ -9,7 +9,6 @@ main {
     h1 {
         font-size: 5rem;
         font-weight: 700;
-        color: #fff;
         margin-bottom: 1rem;
     }
 
@@ -28,7 +27,6 @@ main {
         font-family: monospace;
         font-size: 10rem;
         font-weight: 700;
-        color: #fff;
     }
 
     .settings {
@@ -75,16 +73,28 @@ main {
 .warning {
     color: white;
     background-color: orange;
+
+    a {
+        color: white;
+    }
 }
 
 .danger {
     color: white;
     background-color: red;
+
+    a {
+        color: white;
+    }
 }
 
 .alert {
     color: white;
     animation: alertAnimation 0.5s infinite;
+
+    a {
+        color: white;
+    }
 }
 
 @keyframes alertAnimation {
@@ -100,9 +110,17 @@ main {
 .expired {
     color: black;
     background-color: #fff;
+
+    a {
+        color: black;
+    }
 }
 
 .default {
     color: white;
     background-color: black;
+
+    a {
+        color: white;
+    }
 }
