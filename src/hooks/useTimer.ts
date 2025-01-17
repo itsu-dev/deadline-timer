@@ -70,14 +70,26 @@ export default function useTimer() {
     }
 
     useEffect(() => {
-        const savedTitle = localStorage.getItem('title');
-        if (savedTitle) {
-            setTitle(savedTitle);
+        const searchParams = new URLSearchParams(window.location.search);
+
+        const t = searchParams.get('t');
+        if (t) {
+            setTitle(t);
+        } else {
+            const savedTitle = localStorage.getItem('title');
+            if (savedTitle) {
+                setTitle(savedTitle);
+            }
         }
 
-        const savedBaseTime = localStorage.getItem('baseTime');
-        if (savedBaseTime) {
-            baseTime.current = parseInt(savedBaseTime);
+        const b = searchParams.get('b');
+        if (b) {
+            baseTime.current = parseInt(b);
+        } else {
+            const savedBaseTime = localStorage.getItem('baseTime');
+            if (savedBaseTime) {
+                baseTime.current = parseInt(savedBaseTime);
+            }
         }
 
         setShowSettingsDescription(localStorage.getItem('showSettingsDescription') !== '1');

@@ -37,6 +37,16 @@ function App() {
         setRevealSettings(false);
     }
 
+    const copyShareLink = () => {
+        const url = new URL(window.location.href);
+        url.searchParams.set('t', inputTitle);
+        url.searchParams.set('b', new Date(inputDate).getTime().toString());
+        void navigator.clipboard.writeText(url.toString());
+
+        alert(`共有リンクをコピーしました: ${url.toString()}`);
+    }
+
+
     const _clearSettings = () => {
         clearSettings();
         window.location.reload();
@@ -59,6 +69,7 @@ function App() {
                     <p>期日：<input type={"datetime-local"} value={inputDate}
                                    onChange={(e) => setInputDate(e.target.value)}></input></p>
                     <button onClick={_clearSettings}>設定を初期化</button>
+                    <button onClick={copyShareLink}>共有リンクをコピー</button>
                     <button onClick={saveSettings}>保存</button>
                 </section>
             }
