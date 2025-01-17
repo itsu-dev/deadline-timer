@@ -29,8 +29,18 @@ main {
         font-weight: 700;
     }
 
-    .settings {
+    .tools {
         font-size: 1.6rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1.6rem;
+        flex-wrap: wrap;
+
+        .timer {
+            text-decoration: underline dotted;
+        }
     }
 }
 
