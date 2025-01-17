@@ -6,8 +6,8 @@ export default function useTimer() {
     const [timeText, setTimeText] = useState('');
     const [showSettingsDescription, setShowSettingsDescription] = useState(true);
 
-    // 2025/2/3 23:59:59 JST
-    const baseTime = useRef(1738594799000);
+    // 2025/2/3 17:00:00 JST
+    const baseTime = useRef(1738569600000);
 
     const [className, setClassName] = useState('default');
 
