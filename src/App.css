@@ -1,0 +1,104 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+
+    h1 {
+        font-size: 5rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .settings-description {
+        font-size: 1rem;
+        color: #fff;
+        text-align: center;
+    }
+
+    .time {
+        font-family: monospace;
+        font-size: 10rem;
+        font-weight: 700;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        h1 {
+            font-size: 4rem;
+        }
+
+        .time {
+            font-size: 7rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        h1 {
+            font-size: 3rem;
+        }
+
+        .time {
+            font-size: 5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        h1 {
+            font-size: 2rem;
+        }
+
+        .time {
+            font-size: 3rem;
+        }
+    }
+}
+
+.warning {
+    color: white;
+    background-color: orange;
+}
+
+.danger {
+    color: white;
+    background-color: red;
+}
+
+.alert {
+    color: white;
+    animation: alertAnimation 0.5s infinite;
+}
+
+@keyframes alertAnimation {
+    0% {
+        background-color: black;
+    }
+
+    50% {
+        background-color: red;
+    }
+}
+
+.expired {
+    color: black;
+    background-color: #fff;
+}
+
+.default {
+    color: white;
+    background-color: black;
+}
