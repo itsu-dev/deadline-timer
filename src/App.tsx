@@ -95,7 +95,7 @@ function App() {
         })();
     }, []);
 
-    return (
+    return <>
         <main className={className}>
             <h1>{title}</h1>
             <a href={"#"} onClick={toggleSettings}>
@@ -134,7 +134,12 @@ function App() {
                 </section>
             }
         </main>
-    )
+        <footer className={className}>
+            <aside className={"burning"}>
+                <img src={"burning.webp"} alt={"burning frame"}/>
+            </aside>
+        </footer>
+    </>
 }
 
 export default App

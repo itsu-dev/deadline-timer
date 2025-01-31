@@ -80,6 +80,20 @@ main {
     }
 }
 
+.burning {
+    display: none;
+    width: 100vw;
+    pointer-events: none;
+
+    img {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+}
+
 .warning {
     color: white;
     background-color: orange;
@@ -96,6 +110,10 @@ main {
     a {
         color: white;
     }
+
+    .burning {
+        display: block;
+    }
 }
 
 .alert {
@@ -104,6 +122,10 @@ main {
 
     a {
         color: white;
+    }
+
+    .burning {
+        display: block;
     }
 }
 
